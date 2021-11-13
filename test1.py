@@ -99,3 +99,4 @@ class Curriculum(Entrevistado):
     def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,profesion):
         super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS)
         self.__profesion = profesion
+        #hasta aqui
