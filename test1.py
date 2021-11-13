@@ -56,24 +56,32 @@ class Empleado(Empresa):
     def setEstatura(self, nuevoEst):
         self.__Nombre = nuevoEst
 
-#subclase celuclares
+#subclase para el empleado
 
 class Persona(Empleado):
     _Categoria = "Persona"
-    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS, Domicilio=None):
+    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,Vestimenta, Domicilio=None):
         super().__init__(Titulo,Rango,Nombre,edad,estatura,sueldo)
         self.__PuestoS = PuestoS
         self.__Domicilio =Domicilio
+        self.__Vestimenta=Vestimenta
     def getInfo(self):
         super().getInfo()
         print("El puesto que solcita es:",self.__PuestoS)
+        print("El empleado viste con:",self.__Vestimenta)
 
         if self.__Domicilio !=None:
             print("Esta persona vive en", self.__Domicilio)
+
+    def setPuest(self, NuevoPues):
+        self.__PuestoS = NuevoPues
+
+    def setRango(self, nuevoDomicilio):
+        self.__Domicilio = nuevoDomicilio
 class Entrevistado(Persona):
     _Categoria = "Contrato"
-    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,Vestimenta=True):
-        super().__init__(Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS, Domicilio=None)
+    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,Vestimenta,Domicilio=True):
+        super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,Vestimenta)
         self.__Vestimenta=Vestimenta
 
     def getInfo(self):
@@ -88,15 +96,15 @@ class Entrevistado(Persona):
 class Entrevistador(Empleado):
     _Categoria = "Entrevista"
     def __init__(self, Titulo, Rango, Nombre,edad,estatura,sueldo,Saludo,indicacion):
-        super().__init__(self, Titulo, Rango, Nombre,edad,estatura,sueldo)
+        super().__init__(Titulo, Rango, Nombre,edad,estatura,sueldo)
         self.__Saludo = Saludo
         self.__indicacion= indicacion
     def __describir(self):
-        print("manejo un sueldoo de", self.__Sueldo)
+        print("manejo un sueldoo de", self.__sueldo)
         print("Espere", self.__Saludo)
 class Curriculum(Entrevistado):
     _Categoria = "Entrevista"
     def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,profesion):
         super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS)
         self.__profesion = profesion
-        #hasta aqui
+        #hasta aquino
