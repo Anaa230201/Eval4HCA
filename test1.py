@@ -72,8 +72,6 @@ class Persona(Empleado):
             print("Esta persona vive en", self.__Domicilio)
 class Entrevistado(Persona):
     _Categoria = "Contrato"
-
-
     def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,Vestimenta=True):
         super().__init__(Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS, Domicilio=None)
         self.__Vestimenta=Vestimenta
@@ -86,14 +84,18 @@ class Entrevistado(Persona):
         elif self.__Vestimenta==False:
             print("su vestimenta no es apta para hoy")
 
-"""aqui comienza la entrevista
+#aqui comienza iter
 class Entrevistador(Empleado):
     _Categoria = "Entrevista"
     def __init__(self, Titulo, Rango, Nombre,edad,estatura,sueldo,Saludo,indicacion):
         super().__init__(self, Titulo, Rango, Nombre,edad,estatura,sueldo)
-        self.__Saludo = Marca
+        self.__Saludo = Saludo
         self.__indicacion= indicacion
     def __describir(self):
-        print("el entrevistador dice:", super().getNombre())
-        print("Espere", self.__Marca)
-  """
+        print("manejo un sueldoo de", self.__Sueldo)
+        print("Espere", self.__Saludo)
+class Curriculum(Entrevistado):
+    _Categoria = "Entrevista"
+    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,profesion):
+        super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS)
+        self.__profesion = profesion
