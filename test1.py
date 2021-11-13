@@ -70,4 +70,19 @@ class Persona(Empleado):
 
         if self.__Domicilio !=None:
             print("Esta persona vive en", self.__Domicilio)
+class Entrevistado(Persona):
+    _Categoria = "Contrato"
+
+
+    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,Vestimenta=True):
+        super().__init__(Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS, Domicilio=None)
+        self.__Vestimenta=Vestimenta
+
+    def getInfo(self):
+        super().getInfo()
+
+        if self.__Vestimenta ==True:
+            print("su vesimenta Es adecuada")
+        elif self.__Vestimenta==False:
+            print("su vestimenta no es apta para hoy")
 
