@@ -86,3 +86,14 @@ class Entrevistado(Persona):
         elif self.__Vestimenta==False:
             print("su vestimenta no es apta para hoy")
 
+"""aqui comienza la entrevista
+class Entrevistador(Empleado):
+    _Categoria = "Entrevista"
+    def __init__(self, Titulo, Rango, Nombre,edad,estatura,sueldo,Saludo,indicacion):
+        super().__init__(self, Titulo, Rango, Nombre,edad,estatura,sueldo)
+        self.__Saludo = Marca
+        self.__indicacion= indicacion
+    def __describir(self):
+        print("el entrevistador dice:", super().getNombre())
+        print("Espere", self.__Marca)
+  """
