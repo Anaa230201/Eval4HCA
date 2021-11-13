@@ -92,7 +92,7 @@ class Entrevistado(Persona):
         elif self.__Vestimenta==False:
             print("su vestimenta no es apta para hoy")
 
-#aqui comienza iter
+#aqui comienza iter para el manejo de converscion
 class Entrevistador(Empleado):
     _Categoria = "Entrevista"
     def __init__(self, Titulo, Rango, Nombre,edad,estatura,sueldo,Saludo,indicacion):
@@ -108,3 +108,12 @@ class Curriculum(Entrevistado):
         super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS)
         self.__profesion = profesion
         #hasta aquino
+class Datos(Curriculum):
+    _Categoria = ""
+    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,profesion):
+        super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,profesion)
+
+
+
+
+List=[]
