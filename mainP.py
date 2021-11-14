@@ -15,5 +15,7 @@ print(Gerente.desc())
 print("El gerente comienza a preguntar los datos de la persona")
 print(Persona1.getInfo())
 
+#la version fue corregida
+
 
 
