@@ -11,7 +11,7 @@ class Empresa:
     #Declarar getters y setters
     def Presentacion(self):
         print("mi nombre es:",self.__Trabajador)
-        print("empleado1",self.__SAl)
+        print(self.__SAl)
     def getTrabajador(self):
         return self.__Trabajador
     def getRango(self):
@@ -23,8 +23,8 @@ class Empresa:
         self.__Trabajador = nuevoTrab
     def setRango(self,nuevoRango):
         self.__Rango= nuevoRango
-    def __del__(self):
-        print("El objeto", type(self).__name__,"fue destruido")
+ #   def __del__(self):
+  #      print("El objeto", type(self).__name__,"fue destruido")
 #para empleado1
 class Empleado(Empresa):
     _Categoria = "Trabajador"

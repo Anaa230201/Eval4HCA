@@ -6,4 +6,5 @@ print("la empresa SabalodeXalapa suc. Teziutlan")
 print("Una persona se acerca a la ventanilla")
 
 Secretaria1=Entrevista.Empresa("Sabalo","Karla","Secretaria","Buen  dia bienvenido")
-Secretaria1.
+print(Secretaria1.Presentacion())
+
