@@ -32,6 +32,16 @@ class Empleado(Empresa):
         self.__edad = edad
         self.__estatura=estatura
         self.__sueldo=sueldo
+
+class Secre(Empleado):
+    _Categoria = "Trabajador"
+
+    def __init__(self, Titulo, Rango, Nombre,edad,estatura, presentacion):
+        super().__init__(self, Titulo, Rango, Nombre,edad,estatura)
+        self.__presentacion = presentacion
+
+
+
     def __describir(self):
         print("La empresa:")
         print("\n",super().getTitulo())
@@ -60,13 +70,12 @@ class Empleado(Empresa):
 
 class Persona(Empleado):
     _Categoria = "Persona"
-    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,Vestimenta, Domicilio=None):
-        super().__init__(Titulo,Rango,Nombre,edad,estatura,sueldo)
+    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,Vestimenta,PuestoS, Domicilio=None):
+        super().__init__(Titulo, Rango, Nombre,edad,estatura,sueldo)
         self.__PuestoS = PuestoS
         self.__Domicilio =Domicilio
         self.__Vestimenta=Vestimenta
     def getInfo(self):
-        super().getInfo()
         print("El puesto que solcita es:",self.__PuestoS)
         print("El empleado viste con:",self.__Vestimenta)
 
@@ -108,12 +117,3 @@ class Curriculum(Entrevistado):
         super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS)
         self.__profesion = profesion
         #hasta aquino
-class Datos(Curriculum):
-    _Categoria = ""
-    def __init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,profesion):
-        super().__init__(self, Titulo,Rango,Nombre,edad,estatura,sueldo,PuestoS,profesion)
-
-
-
-
-List=[]
