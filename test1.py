@@ -3,13 +3,15 @@ Evaluacion Unidad 4 resolucioon al problema
 """
 #Declarar super clase
 class Empresa:
-    def __init__(self,Titulo,Trabajador, rango):
+    def __init__(self,Titulo,Trabajador, rango,SAl):
         self.__Titulo = Titulo
         self.__Trabajador = Trabajador
         self.__rango = rango
-
-
+        self.__SAl=SAl
     #Declarar getters y setters
+    def Presentacion(self):
+        print("mi nombre es:",self.__Trabajador)
+        print("empleado1",self.__SAl)
     def getTrabajador(self):
         return self.__Trabajador
     def getRango(self):
